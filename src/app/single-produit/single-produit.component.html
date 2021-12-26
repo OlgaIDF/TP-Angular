@@ -1,0 +1,28 @@
+<div class="container  ">
+    <h1 class="my-5 text-center">Detail de {{product.name | titlecase}}</h1>    
+    
+        <div class="card mb-3 mx-auto" style="max-width: 320rem;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img [src]="product.picture" class="card-img-top me-2" alt="...">
+                  
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name}}</h5>
+                  <p class="card-text">
+                    <span>Prix: {{product.price}}</span><br>      
+                    <span> Description: {{product.description}}</span><br>
+                    
+                  </p>
+                  
+                  <div>
+                    <button type="button" class="btn btn-danger me-2" (click)="goBack()">Retour</button>
+                    <button type="button" class="btn btn-warning me-2" [routerLink] = "['/edit', product.id]">Modifier</button>
+                    <button type="button" class="btn btn-success" (click)="remove()">Supprimer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>

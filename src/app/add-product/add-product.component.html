@@ -1,0 +1,51 @@
+<section>
+    <h1 class="text-center">Ajouter un nouveau produit</h1>
+<div class="row">
+    <div class="col-md-4">
+<img [src]="product.picture" alt="" style="width:350px;">
+
+
+    </div>
+    <div class="col-md-10 mx-auto">
+        <form  #f="ngForm" (ngSubmit)="onSubmit(f)" >
+            <!-- <div class="form-group">
+                <label for="name">Id</label>
+                <input type="number" class="form-control" id="id" [(ngModel)]="product.id" #name="ngModel" name="id" required >
+                </div>      -->
+<div class="form-group">
+    <label for="name">Nom</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="product.name" #name="ngModel" name="name" required >
+    </div>
+    <div class="form-group">
+    <label for="name">Description</label>
+    <input type="text" class="form-control" id="description" [(ngModel)]="product.description" #name="ngModel" name="description" required >
+</div>
+<div class="form-group">
+    <label for="name">Prix</label>
+    <input type="number" class="form-control" id="price" [(ngModel)]="product.price" #name="ngModel" name="price" required >
+    </div>
+    
+    
+    <div class="form-group">
+    <label for="name">Image</label>
+    <input type="text" class="form-control" id="picture" [(ngModel)]="product.picture" #name="ngModel" name="picture" required >
+    </div>
+
+    <div class="form-group">
+        <label for="name">Subtitle</label>
+        <input type="text" class="form-control" id="subtitle" [(ngModel)]="product.subtitle" #name="ngModel" name="subtitle" required >
+        </div>
+
+
+<div class="section_center text-center"  >
+<button type="submit" class="btn btn-warning  my-3" >Ajoutez</button>
+
+</div>
+
+        </form>
+    </div>
+</div>
+
+</section>
+
+
